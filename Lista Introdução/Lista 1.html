@@ -1,11 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js"></script>
+
+    <title>Introdução</title>
 </head>
+
 <body>
-    
+    <div id="ex1" class="ex">
+        <p>
+            <span>1.</span>
+            Um grupo de amigas estão na fila para comprar ingressos para uma sessão de cinema.
+            O preço dos ingressos, em Reais, é dado na tabela abaixo:
+        </p>
+        <table>
+            <tr>
+                <th>Idade</th>
+                <th>Preço</th>
+            </tr>
+            <tr>
+                <td>Até 17 anos</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>18 a 59 anos</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>60 anos ou mais</td>
+                <td>20</td>
+            </tr>
+        </table>
+        <p>
+            Dadas as idades das amigas, escreva uma função para calcular o total a ser pago pelo grupo de amigas.
+            Esta função deve poder receber uma quantidade indefinida de números e retornar um número.
+        </p>
+
+    </div>
+
+    <div id="ex2" class="ex">
+        <p>
+            <span>2.</span>
+            O hotel da Colônia de Férias dos Professores está com uma promoção para as férias de julho.
+            A promoção é válida para quem chegar a partir do dia 1 de julho e sair no dia 1 de agosto.
+            O preço da diária do hotel é menor para quem chegar mais cedo, e vai aumentando a cada dia.
+            Mais precisamente, a promoção funciona assim:
+        </p>
+        <ol>
+            <li>
+                A diária do hotel para cada quem chegar no dia 1 é D Reais. Assim, quem chegar no dia 1 vai
+                pagar um total de 31 × D Reais.
+            </li>
+            <li>
+                A diária do hotel aumenta A reais por dia. Ou seja, a diária é D + A Reais para quem chegar no
+                dia 2; D + 2× A Reais no dia 3; D + 3 × A Reais no dia 4 e assim por diante.
+            </li>
+            <li>
+                A partir do dia 16 a diária não aumenta mais.
+            </li>
+        </ol>
+        <p>
+            Note que quem chegar no dia 2 vai pagar um total de 30 × (D + A) reais; quem chegar no dia 3 vai pagar
+            um total de 29 × (D + 2 × A) reais, e assim por diante. Bruno gosta muito da professora Vilma, e para
+            agradá-la quer ajudá-la a planejar suas férias, escrevendo uma função para calcular o total (em Reais)
+            que a professora Vilma vai gastar, dependendo do dia em que chegar no hotel. Esta função deve receber
+            três parâmetros: o valor da diária (D), o aumento diário (A) e o dia da chegada da professora.
+        </p>
+    </div>
+
+    <div id="ex3" class="ex">
+        <p>
+            <span>3</span>
+            Em um Quadrado Mágico, a soma de qualquer coluna, linha ou diagonal tem sempre o mesmo valor, e
+            nenhum número aparece mais do que uma vez. A dimensão de um quadrado mágico é o número de colunas
+            (ou de linhas,já que o número de colunas é igual ao número de linhas). Rita encontrou um caderno
+            antigo de sua avó, repleto de quadrados mágicos de todas as dimensões. Infelizmente alguns dos números
+            são ilegíveis. Você pode ajudá-la? Dado um quadrado mágico com exatamente um número ilegível, determine
+            o valor e a posição desse número. Crie uma função que recebe uma matriz e retorna um objeto com três
+            propriedades: valor faltante, linha e coluna do valor faltante.
+        </p>
+    </div>
+
+    <div id="ex4" class="ex">
+        <p>
+            <span>4.</span>
+            Baseado no array a seguir:
+        </p>
+        <div>
+
+            <p>let funcionarios = [</p>
+            <p> { nome: "Ricardo", idade: 35, cargo: "Gerente" },
+            </p>
+
+            <p>
+                { nome: "Amanda", idade: 28, cargo: "Analista" },
+            </p>
+            <p>
+                { nome: "Júlia", idade: 40, cargo: "Gerente" },
+            </p>
+            <p>
+                { nome: "Carlos", idade: 31, cargo: "Desenvolvedor" },
+            </p>
+            <p>
+                { nome: "Mariana", idade: 25, cargo: "Desenvolvedor" },
+            </p>
+            <p>
+                { nome: "Lucas", idade: 45, cargo: "Diretor" },
+            </p>
+            <p>
+                { nome: "Fernanda", idade: 29, cargo: "Analista" },
+            </p>
+            <p>
+                { nome: "Gustavo", idade: 38, cargo: "Diretor" },
+            </p>
+            <p>
+                { nome: "Letícia", idade: 22, cargo: "Analista" },
+            </p>
+            <p>
+                { nome: "Pedro", idade: 33, cargo: "Desenvolvedor" }
+            </p>
+            <p>
+                ];
+            </p>
+
+        </div>
+        <p>
+            Crie uma linha de código para responder às seguintes questões:
+        </p>
+
+        <ol>
+            <li>
+                Verifique se todos os funcionários têm uma idade superior a 25 anos. Qual será o resultado
+                dessa verificação (verdadeiro ou falso)?
+            </li>
+            <li>
+                Crie um novo array contendo apenas os funcionários que possuem um cargo que inclua a palavra
+                "Analista" (tanto "Analista" quanto "Analista Júnior").
+            </li>
+            <li>
+                Aplique um reajuste de 10% no salário de cada funcionário, alterando o array original.
+            </li>
+            <li>
+                Calcule a média de idade dos funcionários de cargo “Desenvolvedor”.
+            </li>
+            <li>
+                Ordene o array pela idade dos funcionários.
+            </li>
+            <li>
+                Busque e retorne o primeiro funcionário cujo cargo é “Diretor”.
+            </li>
+        </ol>
+    </div>
+
 </body>
+
 </html>

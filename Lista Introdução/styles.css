@@ -1,0 +1,33 @@
+html{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+}
+
+* {
+    font-size: 1.5rem;
+}
+
+span{
+    font-weight: bold;
+}
+
+div{
+    margin: 3rem 10rem;
+}
+p{
+    text-align: justify;
+}
+
+td{
+    text-align: center;
+    width: 15rem;
+}
+
+table, td, th{
+    border: 0.1rem solid black;
+    margin: 0rem;
+}
+
+table{
+    justify-self: center;
+}
