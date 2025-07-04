@@ -47,7 +47,7 @@ class Interface {
                 finalMessage = "Pink Wins!";
             }
             if (winner === Winner.PLAYER2) {
-                finalMessage = "Green Wins!";
+                finalMessage = "Blue Wins!";
             }
 
             this.setMessage(finalMessage);
@@ -55,15 +55,22 @@ class Interface {
         }
 
         const turn = this.game.getTurn();
-        const turnMessage = (turn === Player.PLAYER1) ? "Pink turn" : "Green turn";
+        const turnMessage = (turn === Player.PLAYER1) ? "Pink turn" : "Blue turn";
         this.setMessage(turnMessage);
     }
+
+    changeborder(){
+        
+
+
+    }
+
     play(evt) {
         let td = evt.target;
         let cell = this.coordinates(td);
         try {
             let mr = this.game.move(cell);
-            td.style.backgroundColor = this.game.getTurn() === Player.PLAYER1 ? "lightgreen" : "pink"; this.changeMessage(mr);
+            td.style.backgroundColor = this.game.getTurn() === Player.PLAYER1 ? "#84DCCF" : "#EF626C"; this.changeMessage(mr);
         } catch (ex) {
             this.setMessage(ex.message);
         }
