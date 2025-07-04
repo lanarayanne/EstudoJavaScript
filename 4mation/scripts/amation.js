@@ -33,7 +33,7 @@ export default class Amation {
     }
 
     getValidAdjacentMoves() {
-        if (!this.lastMove) return []; 
+        if (!this.lastMove) return [];
 
         const { x: lastR, y: lastC } = this.lastMove;
         const validMoves = [];
@@ -53,9 +53,11 @@ export default class Amation {
 
     move(cell) {
         let { x: or, y: oc } = cell;
+
         if (!this.onBoard(cell)) {
             throw new Error("Cell is not on board.");
         }
+
         if (this.board[or][oc] !== CellState.EMPTY) {
             throw new Error("Cell is not empty.");
         }
@@ -70,12 +72,31 @@ export default class Amation {
                 }
             }
         }
-        
+
         this.board[or][oc] = this.turn === Player.PLAYER1 ? CellState.PLAYER1 : CellState.PLAYER2;
         this.lastMove = cell;
         this.turn = (this.turn === Player.PLAYER1) ? Player.PLAYER2 : Player.PLAYER1;
+
+        const validNextMoves = this.getValidAdjacentMoves();
+        const table = document.querySelector("table");
+
+        for (let row of table.rows) {
+            for (let td of row.cells) {
+                td.style.borderColor = "";
+            }
+        }
+
+        validNextMoves.forEach(move => {
+            const td = table.rows[move.x].cells[move.y];
+            if (td) {
+                td.style.borderColor = "#F6E8EA";
+            }
+        });
+
         return this.endOfGame();
     }
+
+
 
     endOfGame() {
         const R = this.rows;
